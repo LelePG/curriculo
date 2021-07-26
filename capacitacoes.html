@@ -1,186 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Letícia Pegoraro Garcez</title>
-    <link rel="stylesheet" href="css/formatacao.css" />
-    <link rel="stylesheet" href="css/capacitacoes.css" />
-  </head>
-  <body>
-    <header>
-      <div class="cabecalho">
-        <img id="minhaFoto" src="imagens/Eu.png" alt = "Foto de Letícia Garcez" />
-        <h1>Letícia Pegoraro Garcez</h1>
-        <p>Estudante de Engenharia de Computação</p>
-      </div>
 
-      <nav id="menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="capacitacoes.html">Capacitações</a></li>
-          <li>
-            <a href="atividades_profisisonais.html">Atividades Profissionais</a>
-          </li>
-          <li>
-            <a href="atividades_voluntarias.html">Atividades Voluntárias</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div class="texto">
-      <ul class="areaDeCapacitacao">
-        <li>
-          <input type="checkbox" id="idiomas" />
-          <label for="idiomas">Idiomas</label>
-          <ul>
-            <li v-for="cursoIdioma in idiomasLista">{{cursoIdioma}} </li>
-          </ul> 
-        </li>
+<head>
+  <meta charset="UTF-8" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Letícia Pegoraro Garcez</title>
+  <link rel="stylesheet" href="css/formatacao.css" />
+  <link rel="stylesheet" href="css/capacitacoes.css" />
+</head>
 
-        <!-- <li>
-          <input type="checkbox" id="linguagensProgramacao" />
-          <label for="linguagensProgramacao"
-            >Programação e Desenvolvimento</label
-          >
-          <ul>
-            <li>
-              Curso de Programação em PHP e Lógica de Programação 50hrs (Exattus
-              escola de profissões) - 2018;
-            </li>
-            <li>
-              Curso de Python 3 - Mundo 01 : Fundamentos 40hrs (Curso em Vídeo)
-              - 2018;
-            </li>
-            <li>Curso de Java 40hrs (Curso em Vídeo) - 2019;</li>
-            <li>Curso de POO Java 40hrs (Curso em Vídeo) - 2019;</li>
-            <li>Data Structures and Algorithms in Java 3hrs (Udemy) - 2019;</li>
-            <li>
-              Learn How to Code: Google's Go (golang) Programming Language
-              46.5hrs (Udemy) - 2020;
-            </li>
-            <li>Curso de HTML5 40hrs (Curso em Vídeo) - 2020;</li>
-            <li>Curso de PHP 40hrs (Curso em Vídeo) - 2020;</li>
-            <li>Curso de POO em PHP 40hrs (Curso em Vídeo) - 2020;</li>
-            <li>Python Básico 8hrs (Solyd Treinamentos) - 2020;</li>
-            <li>Git e GitHub 40hrs (Portal Aula EAD) - 2020;</li>
-            <li>Java Básico 30hrs (Portal Loiane.trainning) - 2020;</li>
-            <li>Java Intermediário 9hrs (Portal Loiane.trainning) - 2020;</li>
-	    <li>SQL for Beginners: The Comprehensive Hands-On Bootcamp (Udemy) - 2021;</li> 
-	    <li>Clean Code (Udemy) - 2021;</li> 
-          </ul>
-        </li>
-        <li>
-          <input type="checkbox" id="escritorio" />
-          <label for="escritorio">Escritório</label>
-          <ul>
-            <li>
-              Secretariado 85hrs (Criativa Cursos Profissionalizantes) - 2014;
-            </li>
-            <li>
-              Excelência no atendimento 20hrs (Instituto Legislativo Brasileiro)
-              - 2020;
-            </li>
-            <li>
-              Tecnologia da Informação e Comunicação 14hrs (UAITEC) - 2020;
-            </li>
-          </ul>
-        </li>
- 	<li>
-          <input type="checkbox" id="eletronica" />
-          <label for="eletronica">Eletrônica</label>
-          <ul>
-            <li>Crash Course Eletronics and PCB Design (Udemy) - 2021;</li> 
-          </ul>
-        </li>
-        <li>
-          <input type="checkbox" id="computadores" />
-          <label for="computadores">Informática</label>
-          <ul>
-            <li>
-              Curso de Formatação de Computadores e Rede Doméstica 10hrs
-              (Gygabyte Sul Informática) - 2015;
-            </li>
-            <li>
-              Curso de Hardware e Montagem de Computadores 16hrs (Gygabyte Sul
-              Informática) - 2015;
-            </li>
-            <li>
-              Curso de Manutenção de Notebooks e Introdução ao Mundo dos Drones
-              10hrs (Gygabyte Sul Informática) - 2016;
-            </li>
-            <li>Terminal Linux 1h (Portal Diego Mariano) - 2019;</li>
-            <li>
-              Introdução ao Sistema Operacional Linux 2hrs (Portal Diego
-              Mariano) - 2019;
-            </li>
-          </ul>
-        </li>
-        <li>
-          <input type="checkbox" id="seginf" />
-          <label for="seginf">Segurança da Informação</label>
-          <ul>
-            <li>
-              Introdução à Segurança da Informação 15hrs (eSecurity) - 2020;
-            </li>
-          </ul>
-        </li>
-      </ul> -->
+<body>
+  <header>
+    <div class="cabecalho">
+      <img id="minhaFoto" src="imagens/Eu.png" alt="Foto de Letícia Garcez" />
+      <h1>Letícia Pegoraro Garcez</h1>
+      <p>Estudante de Engenharia de Computação</p>
     </div>
-    <script>
-      new Vue({
-        el: ".areaDeCapacitacao",
-        data:{
-          idiomasLista: [
+
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="capacitacoes.html">Capacitações</a></li>
+        <li>
+          <a href="atividades_profisisonais.html">Atividades Profissionais</a>
+        </li>
+        <li>
+          <a href="atividades_voluntarias.html">Atividades Voluntárias</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="texto">
+    <ul class="areaDeCapacitacao">
+      <li>
+        <input type="checkbox" id="idiomas" />
+        <label for="idiomas">Idiomas</label>
+        <ul>
+          <li v-for="cursoIdioma in idiomasLista">{{cursoIdioma}} </li>
+        </ul>
+      </li>
+
+      <li>
+        <input type="checkbox" id="linguagensProgramacao" />
+        <label for="linguagensProgramacao">Programação e Desenvolvimento</label>
+        <ul>
+          <li v-for="cursoProgramacao in programacaoLista">{{cursoProgramacao}} </li>
+        </ul>
+      </li>
+      <li>
+        <input type="checkbox" id="escritorio" />
+        <label for="escritorio">Escritório</label>
+        <ul>
+          <li v-for="cursoEscritorio in escritorioLista">{{cursoEscritorio}} </li>
+        </ul>
+      </li>
+      <li>
+        <input type="checkbox" id="eletronica" />
+        <label for="eletronica">Eletrônica</label>
+        <ul>
+          <li v-for="cursoEletronica in eletronicaLista">{{cursoEletronica}} </li>
+        </ul>
+      </li>
+      <li>
+        <input type="checkbox" id="computadores" />
+        <label for="computadores">Informática</label>
+        <ul>
+          <li v-for="cursoInformatica in informaticaLista">{{cursoInformatica}} </li>
+        </ul>
+      </li>
+      <li>
+        <input type="checkbox" id="seginf" />
+        <label for="seginf">Segurança da Informação</label>
+        <ul>
+          <li v-for="cursoSeguranca in segurancaLista">{{cursoSeguranca}} </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <script>
+    new Vue({
+      el: ".areaDeCapacitacao",
+      data: {
+        idiomasLista: [
           "Enligsh for kids level one 80hrs (Criativa Cursos Profissionalizantes) - 2010;",
           "English for kids level two 80hrs (Criativa Cursos Profissionalizantes) - 2011;",
           "Inglês para jovens (flashligth 3) 80hrs (Criativa Cursos Profissionalizantes) - 2012;",
           "Curso de inglês 90hrs (New Way Enligsh Course)- 2013;",
           "Curso de inglês 90hrs (New Way Enligsh Course) - 2014;",
           "Curso básico de espanhol módulos 1,2 e 3 90hrs no total (Universidade Federal do Vale do São Francisco) - 2019;"
-          ],
-          programacaoLista:[
-            "Curso de Programação em PHP e Lógica de Programação 50hrs (Exattus escola de profissões) - 2018;",
-            "Curso de Python 3 - Mundo 01 : Fundamentos 40hrs (Curso em Vídeo) - 2018;",
-            "Curso de Java 40hrs (Curso em Vídeo) - 2019;",
-            "Curso de POO Java 40hrs (Curso em Vídeo) - 2019;",
-            "Data Structures and Algorithms in Java 3hrs (Udemy) - 2019;",
-            "Learn How to Code: Google's Go (golang) Programming Language 46.5hrs (Udemy) - 2020;",
-            "Curso de HTML5 40hrs (Curso em Vídeo) - 2020;",
-            "Curso de PHP 40hrs (Curso em Vídeo) - 2020;",
-            "Curso de POO em PHP 40hrs (Curso em Vídeo) - 2020;",
-            "Python Básico 8hrs (Solyd Treinamentos) - 2020;",
-            "Git e GitHub 40hrs (Portal Aula EAD) - 2020;",
-            "Java Básico 30hrs (Portal Loiane.trainning) - 2020;",
-            "Java Intermediário 9hrs (Portal Loiane.trainning) - 2020;",
-            "SQL for Beginners: The Comprehensive Hands-On Bootcamp (Udemy) - 2021;",
-            "Clean Code (Udemy) - 2021;"
-          ],
-          escritorioLista:[
-            "Secretariado 85hrs (Criativa Cursos Profissionalizantes) - 2014;",
-            "Excelência no atendimento 20hrs (Instituto Legislativo Brasileiro)- 2020;",
-            "Tecnologia da Informação e Comunicação 14hrs (UAITEC) - 2020;"
-          ],
-          eletronicaLista:[
-            "Crash Course Eletronics and PCB Design (Udemy) - 2021;",
-          ],
-          informaticaLista:[
-            "Curso de Formatação de Computadores e Rede Doméstica 10hrs (Gygabyte Sul Informática) - 2015;",
-            "Curso de Hardware e Montagem de Computadores 16hrs (Gygabyte Sul Informática) - 2015;",
-            "Curso de Manutenção de Notebooks e Introdução ao Mundo dos Drones 10hrs (Gygabyte Sul Informática) - 2016;",
-            "Terminal Linux 1h (Portal Diego Mariano) - 2019;",
-            "Introdução ao Sistema Operacional Linux 2hrs (Portal Diego Mariano) - 2019;",
-          ],
-          segurancainfoLista:[
-            "Introdução à Segurança da Informação 15hrs (eSecurity) - 2020;"
-          ]
-        }
+        ],
+        programacaoLista: [
+          "Curso de Programação em PHP e Lógica de Programação 50hrs (Exattus escola de profissões) - 2018;",
+          "Curso de Python 3 - Mundo 01 : Fundamentos 40hrs (Curso em Vídeo) - 2018;",
+          "Curso de Java 40hrs (Curso em Vídeo) - 2019;",
+          "Curso de POO Java 40hrs (Curso em Vídeo) - 2019;",
+          "Data Structures and Algorithms in Java 3hrs (Udemy) - 2019;",
+          "Learn How to Code: Google's Go (golang) Programming Language 46.5hrs (Udemy) - 2020;",
+          "Curso de HTML5 40hrs (Curso em Vídeo) - 2020;",
+          "Curso de PHP 40hrs (Curso em Vídeo) - 2020;",
+          "Curso de POO em PHP 40hrs (Curso em Vídeo) - 2020;",
+          "Python Básico 8hrs (Solyd Treinamentos) - 2020;",
+          "Git e GitHub 40hrs (Portal Aula EAD) - 2020;",
+          "Java Básico 30hrs (Portal Loiane.trainning) - 2020;",
+          "Java Intermediário 9hrs (Portal Loiane.trainning) - 2020;",
+          "SQL for Beginners: The Comprehensive Hands-On Bootcamp (Udemy) - 2021;",
+          "Clean Code (Udemy) - 2021;"
+        ],
+        escritorioLista: [
+          "Secretariado 85hrs (Criativa Cursos Profissionalizantes) - 2014;",
+          "Excelência no atendimento 20hrs (Instituto Legislativo Brasileiro)- 2020;",
+          "Tecnologia da Informação e Comunicação 14hrs (UAITEC) - 2020;"
+        ],
+        eletronicaLista: [
+          "Crash Course Eletronics and PCB Design (Udemy) - 2021;",
+        ],
+        informaticaLista: [
+          "Curso de Formatação de Computadores e Rede Doméstica 10hrs (Gygabyte Sul Informática) - 2015;",
+          "Curso de Hardware e Montagem de Computadores 16hrs (Gygabyte Sul Informática) - 2015;",
+          "Curso de Manutenção de Notebooks e Introdução ao Mundo dos Drones 10hrs (Gygabyte Sul Informática) - 2016;",
+          "Terminal Linux 1h (Portal Diego Mariano) - 2019;",
+          "Introdução ao Sistema Operacional Linux 2hrs (Portal Diego Mariano) - 2019;",
+        ],
+        segurancainfoLista: [
+          "Introdução à Segurança da Informação 15hrs (eSecurity) - 2020;"
+        ]
+      }
 
-      })
-      </script>
-  </body>
+    })
+  </script>
+</body>
+
 </html>
-
