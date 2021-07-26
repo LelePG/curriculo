@@ -5,8 +5,6 @@ body {
   background:#C9ADA7;
   display: flex;
   font-family: Gotu, sans-serif;
-  padding-right: 200px;
-  padding-left: 200px;
   display: flex;
   justify-content: center;
 }
@@ -14,8 +12,8 @@ body {
 header {
   float: right;
   position: absolute;
-  width: 900px;
   margin: auto;
+  width: 80%;
 }
 
 /*CABEÇALHO DE APRESENTAÇÃO*/
@@ -50,7 +48,6 @@ nav#menu {
 nav#menu ul {
   list-style: none;
   position: absolute;
-  padding-left: 120px;
 }
 
 nav#menu li {
@@ -77,9 +74,7 @@ nav#menu a:hover {
 /*DIV DE TEXTO*/
 div.texto {
   background-color: #F2E9E4;
-  display: block;
-  width: 850px;
-  position: center;
+  width: 75%;
   border-style: solid;
   border-width: 2px;
   border-radius: 30px;
