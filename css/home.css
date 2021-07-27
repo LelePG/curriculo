@@ -4,14 +4,6 @@ ul#links{
     padding-left: 25px;
 }
 
-a.link {
-    text-decoration-line: blink;
-    color: black;
-}
-
-a.link:hover {
-    font-weight: bold;
-}
   
 abbr {
  text-decoration: none;
